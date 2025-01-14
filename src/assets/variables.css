@@ -1,0 +1,74 @@
+:root {
+  --header-height: 55px;
+  --hue-modal: 191;
+  --dash-width: 100vw; /* modified by dev panel */
+  --dash-side-margin: 20px;
+  --dash-vertical-margin: 11px;
+  --bottom-side-width: auto; /* will be updated with js */
+  --top-and-bottom-row-min-height: 60px;
+  --safe-zone-padding: 7px;
+  --app-padding: 21px;
+  --app-dash-padding: 0.625rem;
+  --border-radius: 5px;
+  --dash-metric-side-padding: 10px;
+  --form-bottom-margin: 26px;
+  --form-element-margin: 1.2rem;
+  --form-element-margin-small: 0.75rem;
+  --form-element-padding: 13px;
+  --form-label-bottom-margin: 6px;
+  --font-size-greeting: 3.375rem;
+  --font-default: -apple-system, BlinkMacSystemFont, 'Neue Haas Grotesk Text Pro', 'Helvetica Neue',
+    Helvetica, Arial, sans-serif;
+  --default-icon-size: 13px;
+
+  /* Dashboard */
+  --dash-padding-top: 0px;
+  --dash-padding-right: 0px;
+  --dash-padding-bottom: 0px;
+  --dash-padding-left: 0px;
+
+  /* Border radius */
+  --border-radius-0: 0rem;
+  --border-radius-1: 0.375rem;
+  --border-radius-2: 0.625rem;
+  --border-radius-round: 625rem;
+
+  /* Spacing */
+  --spacing-0: 0rem;
+  --spacing-1: 0.125rem;
+  --spacing-2: 0.25rem;
+  --spacing-3: 0.375rem;
+  --spacing-4: 0.5625rem;
+  --spacing-5: 0.9375rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 2.375rem;
+  --spacing-8: 3.875rem;
+  --spacing-9: 6.25rem;
+  --spacing-10: 10.125rem;
+  --spacing-11: 16.375rem;
+  --spacing-12: 26.5625rem;
+
+  /* Fonts */
+  --font-clock: 500 9.5rem var(--font-default);
+  --font-h1: 500 3.5rem var(--font-default);
+  --font-h2: 500 3rem var(--font-default);
+  --font-h3: 500 2.5rem var(--font-default);
+  --font-xxl: 500 1.875rem var(--font-default);
+  --font-xl: 500 1.5rem var(--font-default);
+  --font-xl-bold: 600 1.5rem var(--font-default);
+  --font-l: 500 1.125rem var(--font-default);
+  --font-m: 500 1rem var(--font-default);
+  --font-m-bold: 600 1rem var(--font-default);
+  --font-m-copy: 400 1rem var(--font-default);
+  --font-s: 500 0.875rem var(--font-default);
+  --font-s-bold: 600 0.875rem var(--font-default);
+  --font-xs: 500 0.8125rem var(--font-default);
+  --font-xs-bold: 700 0.8125rem var(--font-default);
+  --font-xs-label: 600 0.8125rem var(--font-default);
+  --font-xxs: 600 0.625rem var(--font-default);
+  --font-xxs-label: 700 0.625rem var(--font-default);
+
+  --f20010c8: 164px;
+  --255f5fba: 79px;
+  --28ea5c7c: 262px;
+}

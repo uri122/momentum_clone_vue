@@ -1,0 +1,301 @@
+/* Responsive */
+
+@media screen and (max-height: 800px) {
+  :root {
+    --font-size-greeting: 2.5rem;
+  }
+  .clock .time {
+    font-size: 9rem;
+  }
+  .center-below {
+    font-size: 0.85rem;
+  }
+  .center-below .focus-row {
+    font-size: 2.15rem !important;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  :root {
+    --font-size-greeting: 2.25rem;
+  }
+  .clock .time {
+    font-size: 8rem;
+  }
+  .center-below {
+    font-size: 0.75rem;
+  }
+  .center-below .focus-row {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .center .clock {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+
+/* #.touch class, .u--touch-hide, & .u--touch-only
+	breakpoints can be used for responsive design, but anything that shows / hides elements or substantially changes the way the UI works to account for touch screens should make use of this class. This is because some logic that shows and hides ui elements is controlled by Javascript based on the isTouchDevice util. This also controls the mobile class and that way everything will be in sync.
+
+	Examples of touch screen concerns:
+	- Always showing all controls that would only be visible on hover otherwise
+	- Hiding dropdown ellipsis because clickable areas are entire app region
+	- Disabling hover interactions on bg info and quote because clicking should open toast menu.
+ */
+
+.touch .u--touch-hide {
+  display: none !important;
+}
+.touch .u--touch-only {
+  display: block !important;
+}
+.touch .u--touch-only-flex {
+  display: flex !important;
+}
+
+.touch .app:not(.popup, .reset-app-styles),
+.touch .app-wrapper:not(.popup) {
+  transition:
+    background 0.15s ease,
+    opacity 0.15s ease;
+} /* Safari iOS fix, doesn't like transition all https://stackoverflow.com/questions/21767037/css-transitions-not-working-in-safari */
+
+.touch-overlay {
+  display: none;
+}
+.touch .touch-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  background: black;
+  opacity: var(--opacity-stop-4);
+}
+
+.mobile-close {
+  display: none !important;
+}
+.touch .mobile-close {
+  margin-left: 14px;
+  display: flex !important;
+}
+.mobile-close .icon-wrapper:after {
+  --icon-wrapper-size: 31px !important;
+}
+.mobile-close .icon {
+  --size: 9px;
+  height: var(--size);
+  width: var(--size);
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  :root {
+    --app-width: calc(100vw - 12px);
+  }
+
+  .new-upsell {
+    width: var(--app-width) !important;
+  }
+}
+
+/* Phone */
+@media screen and (max-width: 450px) {
+  :root {
+    --app-max-height: 90%;
+    --app-offset: 4px;
+    --page-margin: 20px;
+    --border-radius: 10px;
+    --app-translate-amount: 102%;
+    --font-size-greeting: clamp(10px, 7vw, 26px);
+    --app-edge-padding: 4px;
+  }
+
+  .u--mobile-hide {
+    display: none !important;
+  } /* For hiding things on mobile, e.g. text or something not appropriate for the smaller screen */
+
+  .u--mobile-only {
+    display: block !important;
+  }
+  .u--mobile-only-flex {
+    display: flex !important;
+  }
+  .u--mobile-only-inline {
+    display: inline !important;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  .background-overlay {
+    background-color: hsla(0 0% 0% / 0.25);
+    background-image: none !important;
+  }
+
+  .toggle {
+    padding: 0 9px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .apps {
+    overflow: hidden;
+  }
+
+  .top-row {
+  }
+  .top-left {
+  }
+  .team-logo .team-app {
+    width: auto !important;
+    max-width: var(--app-width);
+    left: var(--app-offset);
+  }
+
+  .top-right {
+  }
+  .app-dash .metric-stat {
+    font-size: 22px;
+  }
+
+  .weather .app-dash {
+    padding-top: 16px;
+  }
+  .weather .metric-stat .icon-weather {
+    margin-right: 4px !important;
+    font-size: 22px;
+  }
+
+  .center-above {
+    display: none;
+  }
+
+  .center {
+    flex-basis: 50%;
+    justify-content: flex-start;
+  }
+  .center-container {
+    padding-top: 10vh;
+  }
+  .clock .time {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  .greeting .content {
+    padding-top: 4px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .center-below {
+  }
+
+  .app-wrapper {
+    transform: none !important; /* to get the show/hide animation with position: fixed on .app-wrapper, we need to do the translation on the .app element */
+  }
+  .app:not(.dropdown, .reset-app-styles) {
+    height: auto;
+    position: fixed !important;
+    border-radius: var(--border-radius);
+  }
+  .app:not(.dropdown, .reset-app-styles, .popup, .toast, .calculates-own-max-height) {
+    max-height: var(--app-max-height) !important;
+  }
+  .nipple:after {
+    display: none;
+  }
+  .dash-dropdown {
+    width: auto !important;
+  }
+
+  /* Show/hide app popups */
+  .show {
+    opacity: 1;
+  }
+  .show-fade-in .app:not(.popup):not(.toast) {
+    transform: none !important;
+  }
+
+  .top-row .app:not(.popup):not(.toast) {
+    top: var(--app-offset) !important;
+  }
+  .top-row .app:not(.popup):not(.toast) {
+    transform: translateY(calc(var(--app-translate-amount) * -1));
+  }
+  .bottom-row .app:not(.popup):not(.toast) {
+    bottom: var(--app-offset) !important;
+  }
+  .bottom-row .app:not(.popup):not(.toast) {
+    transform: translateY(var(--app-translate-amount));
+  }
+
+  .top-left .app:not(.popup),
+  .bottom-left .app:not(.popup) {
+    left: var(--app-edge-padding);
+  }
+  .top-right .app:not(.popup),
+  .bottom-right .app:not(.popup) {
+    right: var(--app-edge-padding);
+  }
+
+  .new-upsell .demo {
+    display: none !important;
+  }
+
+  /* Widget/Apps */
+  .app-dash-icon .icon,
+  .app-dash-icon svg {
+    --icon-size: 20px;
+  }
+
+  .weather-app {
+  }
+
+  /*.todo-app { width: var(--app-width) !important; display: flex !important; flex-direction: column; }*/
+  /* .new-todo-footer { z-index: 2; } <- was showing over top todo list chooser, keeping just in case removing this now breaks something else */
+
+  /* Team — To Review */
+  .app-container.apps {
+    display: none;
+  }
+  .topics {
+    display: none;
+  }
+
+  /* Notification */
+  .notification-app {
+    box-sizing: border-box;
+  }
+  .has-big-icon .notification-icon-wrapper {
+    display: none;
+  }
+  .notification-hide:after {
+    --icon-wrapper-size: 31px;
+  }
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  /* Horizontal orientation enables admire mode */
+  /* Transition is disabled alongside the visibility to avoid having elements remain visible for their transition duration after enabling admire mode */
+  .touch .app-container:not(.photo-info) *,
+  .touch .background-overlay * {
+    transition: none !important;
+    visibility: hidden !important;
+  }
+}
