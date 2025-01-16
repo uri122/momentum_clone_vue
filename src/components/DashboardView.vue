@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <div>
         <div class="top-row">
             <div class="weather">날씨</div>
             <div class="prefer">배경설정</div>
@@ -11,23 +11,26 @@
             <h1>{{nowM}}</h1>
         </div>
         <div class="main-ment">
-            <h2>Who Are You?</h2>
-            <input type="text" maxlength="30" autocomplete="off">
+            <h2>Find Your Way, {{ userName }}</h2>
         </div>
-    </main>
+    </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
-let nowH = ref('00');
-let nowM = ref('00');
+const props = defineProps<{
+    userName: string | null
+}>()
+
+const nowH = ref('00');
+const nowM = ref('00');
 const getNowTime = () => {
     const now = new Date();
     nowH.value = String(now.getHours()).padStart(2, '0');
     nowM.value = String(now.getMinutes()).padStart(2, '0');   
 }
-const timeUpdate = setInterval(getNowTime, 1000);
+setInterval(getNowTime, 1000);
 </script>
 
 <style scoped>
