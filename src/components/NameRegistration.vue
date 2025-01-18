@@ -24,7 +24,7 @@ import { ref } from 'vue';
 const userName = ref('');
 
 const checkName = () => {
-    if (userName.value?.length < 3) {
+    if (userName.value?.length < 2) {
         alert("두 글자 이상 입력해주세요")
     } else {
         goDashboard();
